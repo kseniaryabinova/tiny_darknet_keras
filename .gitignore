@@ -4,3 +4,5 @@ env
 *.cfg
 *.yml
 !example.yml
+tensorboard_logs
+checkpoints

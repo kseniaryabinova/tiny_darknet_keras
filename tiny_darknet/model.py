@@ -1,15 +1,9 @@
 import keras
-from keras.datasets import cifar100
-from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten
+from keras.layers import Dense, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 
 from . import config
-import logging
-
-
-(x_train, y_train), (x_test, y_test) = cifar100.load_data()
 
 model = Sequential()
 

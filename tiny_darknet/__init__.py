@@ -25,6 +25,3 @@ with open(config_path) as file:
         logging.warning('Config loaded from %s', config_path)
     except yaml.YAMLError as exception:
         raise exception
-
-
-
