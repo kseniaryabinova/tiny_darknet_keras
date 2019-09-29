@@ -1,19 +1,12 @@
 from .model import model
 from .data_loading import load_data
-from .data_preprocessing import preprocess_train_data, preprocess_test_data
-from .callbacks import callbacks_array
+from .data_preprocessing import preprocess_test_data
 from .training import train_model
 
 from . import config
 
-import logging
-
 (x_train, y_train), (x_test, y_test) = load_data()
+x_test_, y_test_ = preprocess_test_data(x_test, y_test)
 
 if config['model']['is_train']:
-    datagen, x_train, y_train = preprocess_train_data(x_train, y_train)
-    logging.debug(callbacks_array)
-    train_model(model, datagen, x_train, y_train, x_test, y_test)
-
-else:
-    x_test, y_test = preprocess_test_data(x_test, y_test)
+    train_model(model, x_train, y_train, x_test_, y_test_)
