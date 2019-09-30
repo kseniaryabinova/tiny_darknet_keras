@@ -26,9 +26,10 @@ model:
 
   # for training
   path_to_tensorboard_logs: 'tensorboard_logs'
-  path_to_checkpoints: 'model-improvement-{epoch:02d}.hdf5'
+  path_to_checkpoints: 'checkpoints/model-improvement-{epoch:02d}.hdf5'
 
   batch_size: 128
   epochs: 100
   decay: 0.0005
   learning_rate: 0.1
+  momentum: 0.9
