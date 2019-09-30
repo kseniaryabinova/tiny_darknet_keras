@@ -1,9 +1,9 @@
 import logging
-from keras.datasets import cifar100
+from keras.datasets import cifar10
 
 
 def load_data():
-    (x_train, y_train), (x_test, y_test) = cifar100.load_data()
+    (x_train, y_train), (x_test, y_test) = cifar10.load_data()
     logging.warning('CIFAR100 has been loaded! \n'
                     '\tTrain has %d examples\n'
                     '\tTest has %d examples',
