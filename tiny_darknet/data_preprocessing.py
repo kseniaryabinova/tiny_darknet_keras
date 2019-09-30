@@ -41,7 +41,7 @@ def preprocess_train_data(x, y):
 
     # Compute quantities required for feature-wise normalization
     # (std, mean, and principal components if ZCA whitening is applied).
-    datagen.fit(x_train)
+    datagen.fit(x_train, augment=True)
 
     return datagen, x_train, y_train
 
