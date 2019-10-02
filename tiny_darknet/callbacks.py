@@ -30,7 +30,7 @@ def tensorboard():
     callback = keras.callbacks.tensorboard_v1.TensorBoard(
         log_dir=config['model']['path_to_tensorboard_logs'],
         histogram_freq=0, batch_size=config['model']['batch_size'],
-        write_graph=True, write_grads=True, write_images=False, embeddings_freq=0,
+        write_graph=True, write_grads=True, write_images=True, embeddings_freq=0,
         embeddings_layer_names=None, embeddings_metadata=None,
         embeddings_data=None, update_freq='epoch')
 

@@ -21,6 +21,7 @@ def preprocess_train_data(x, y):
         # randomly shift images horizontally (fraction of total width)
         width_shift_range=0.1,
         # randomly shift images vertically (fraction of total height)
+        # brightness_range=[0.7, 1.3],
         height_shift_range=0.1,
         shear_range=0.,  # set range for random shear
         zoom_range=0.,  # set range for random zoom
